@@ -1,0 +1,128 @@
+footer {
+  --theme-deafult: #B22830;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #333;
+  margin-top: 50px;
+  padding: 60px 0; 
+  background-color: #f7f7f7;
+}
+/* a {
+    text-decoration: none;
+    color: black;
+}
+.no-dot {
+    list-style-type: none;
+} */
+img {
+    width: 60px;
+    height: 60px;
+}
+
+.footer {
+    background-color: #f7f7f7
+}
+
+.footer .footer-widget {
+    padding-right: 15px
+}
+
+.footer .footer-widget .social {
+    margin-top: 20px
+}
+
+.footer .footer-widget .social li {
+    width: 33px;
+    height: 33px;
+    border: 1px solid #444;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 5px
+}
+
+.footer .footer-widget .social li a i {
+    color: #383838
+}
+
+.footer .footer-widget .ped-btn-footer {
+    box-shadow: none!important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 20px;
+    padding: 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .4s ease 0s;
+    z-index: 222;
+    background-color: var(--theme-deafult);
+    color: #fff;
+    border-radius: 3px;
+    line-height: 45px;
+    border: 1px solid white;
+}
+
+.footer .footer-widget .title {
+    margin-bottom: 10px
+}
+
+.footer .footer-widget .title h5 {
+    font-size: 18px;
+    font-weight: 600
+}
+
+.footer .footer-widget a {
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 32px;
+    color: #333
+}
+
+.footer .footer-widget .newsletter-widget {
+    position: relative;
+    margin: 15px 0 20px
+}
+
+.footer .footer-widget p {
+    line-height: 24px;
+    color: #333
+}
+
+.footer .footer-widget ul {
+    list-style-type: none
+}
+
+.footer .footer-widget .about-widget .logo img {
+    max-width: 240px
+}
+
+.footer .footer-widget .tel-box .icon i {
+    color: #383838;
+    display: block;
+    line-height: 27px;
+    margin-right: 5px;
+    width: 18px;
+    text-align: center;
+    font-size: 18px
+}
+
+.footer .footer-widget .tel-box .text p a {
+    line-height: 22px
+}
+
+.footer .subscribe-widget input {
+    height: 45px;
+    background: #fff;
+    font-size: 15px;
+    line-height: 45px;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    padding: 0 65px 0 20px;
+    color: #777
+}
+.footer {
+    left: 0;
+    bottom: 0;
+    height: 100%;
+}

@@ -1,0 +1,33 @@
+.p-card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .p-card {
+    width: 100%;
+    max-width: 250px;
+    margin: 10px;
+    box-sizing: border-box;
+    border: 1px solid #B22830;
+  }
+
+  .p-card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding: 15px;
+  }
+
+  .p-card-body {
+    padding: 1rem;
+    text-align: center;
+  }
+  .p-card-text {
+    color: #B22830;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  a {
+    text-decoration: none;
+  }

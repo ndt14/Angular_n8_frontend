@@ -1,0 +1,126 @@
+<!-- Full Page Image Header with Vertically Centered Content -->
+
+<header class="masthead">
+  <div class="container">
+    <div>
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="http://u658941.webmienphi.vn/userfiles/img/658941/flash-sale-trong-ngay-pc-banner-22.jpg">
+
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="http://u658941.webmienphi.vn/userfiles/img/658941/20-10.jpg">
+
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="http://u658941.webmienphi.vn/userfiles/img/658941/tro-gia-thang-10-a.jpg">
+
+        </div>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+    <div class="slidebar">
+      <div class="banner1">
+        <img src="http://u658941.webmienphi.vn/userfiles/img/658941/xiaomi-poco-3.jpg" alt="">
+      </div>
+      <h3>Tin nổi bật</h3>
+      <div class="banner">
+        <img
+          src="http://u658941.webmienphi.vn/files/sanpham/8/300_1/jpg/iphone-12-pro-128gb-chinh-hang-vn/a_300x300.jpg"
+          alt="">
+        <a href="#">Trợ giá iPad học Online chào năm học mới</a>
+      </div>
+      <div class="banner">
+        <img
+          src="http://u658941.webmienphi.vn/files/sanpham/10/300_1/jpg/iphone-12-pro-128gb-chinh-hang-vn/a_300x300.jpg"
+          alt="">
+        <a href="#">Trợ giá iPad học Online chào năm học mới</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<h3 class="text-center title-product-sale">Sale Products</h3>
+<owl-carousel-o [options]="customOptions">
+  <ng-template carouselSlide *ngFor="let product of pagedProducts">
+    <div class="container card col-3 mb-4 card-product" style="width: 20rem">
+      <div class="card-body">
+        <img [src]="product.image" alt="" class="card-img-top my-4" />
+        <a [routerLink]="['/products', product._id]" class="home-link-product-detail"
+          (click)="viewProductDetail(product)">
+          <h5 class="card-title">{{ product.name }}</h5>
+        </a>
+        <h6 class="card-title">Brand: {{ product.brand }}</h6>
+        <p class="card-text price">{{ product.price }} $</p>
+
+      </div>
+    </div>
+  </ng-template>
+
+</owl-carousel-o>
+
+
+
+
+<section id="home-section">
+  <div class="container">
+    <h3 class="text-center title-product-sale">All Products</h3>
+    <div class="filter-container">
+      <h4 class="filter-title">Filter by Price:</h4>
+      <div class="price-filter">
+        <input class="price-input" type="number" [(ngModel)]="minPrice" placeholder="Min Price">
+        <input class="price-input" type="number" [(ngModel)]="maxPrice" placeholder="Max Price">
+        <button class="filter-button" (click)="filterProductsByPrice()">Filter</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3 mb-4" *ngFor="let product of pagedProducts">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <a [routerLink]="['/products', product._id]" class="home-link-product-detail">
+              <img [src]="product.image" alt="" class="card-img-top my-4" />
+              <h5 class="card-title">{{ product.name }}</h5>
+            </a>
+            <h6 class="card-title">Brand: {{ product.brand }}</h6>
+            <p class="card-text price">{{ product.price }} $</p>
+            <!-- pipes -->
+          </div>
+          <div class="button-container">
+            <button [routerLink]="['/products', product._id]" class="btn">Detail</button>
+            <button class="btn-add-to-cart" (click)="addToCart(product)">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="pagination">
+      <button class="page-link" [disabled]="currentPage === 1" (click)="goToPage(currentPage - 1)">Previous</button>
+      <button class="page-link" *ngFor="let page of getPageNumbers()" [class.active]="page === currentPage"
+        (click)="goToPage(page)">{{ page }}</button>
+      <button class="page-link" [disabled]="currentPage === totalPages"
+        (click)="goToPage(currentPage + 1)">Next</button>
+    </div>
+
+
+  </div>
+</section>

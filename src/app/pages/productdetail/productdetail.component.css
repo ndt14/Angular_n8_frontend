@@ -1,0 +1,105 @@
+.container {
+  margin-top: 100px;
+}
+
+.cart {
+  margin-top: 50px;
+}
+
+.image-detail img {
+  width: 500px;
+  margin-bottom: 50px;
+}
+
+.quanlity {
+  margin-top: 2rem;
+}
+
+.buttons_added {
+  display: flex;
+  align-items: center;
+}
+
+.buttons_added input {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  text-align: center;
+  border: 1px solid #ced4da;
+  border-radius: 0;
+}
+
+.buttons_added .input-qty {
+  width: 3rem;
+  height: 2rem;
+  border: none;
+  border-top: 1px solid #ced4da;
+  border-bottom: 1px solid #ced4da;
+  padding: 0.25rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.buttons_added .minus,
+.buttons_added .plus {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttons_added .minus {
+  border-radius: 0 0 0 4px;
+}
+
+.buttons_added .plus {
+  border-radius: 0 0 4px 0;
+}
+
+.btn {
+  background-color: #b22830;
+  color: white;
+  border-radius: 10px;
+  width: 100px;
+  width: 350px;
+}
+.mota {
+  background: #fffee1;
+  width: 350px;
+  border: 1px dashed #dfdea2;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+
+.bocuc_48 {
+  display: block;
+  float: left;
+  /* vertical-align: top; */
+  font-size: 16px;
+  background: #ff711b;
+}
+.bocuc_48 {
+  border-radius: 5px;
+}
+.bocuc {
+  /* position: relative; */
+  margin-top: -440px;
+  margin-left: 400px;
+  padding: 10px 10px;
+  color: white;
+  background-color: #b22830;
+}
+.bocuc {
+  box-sizing: border-box;
+}
+
+.read-more {
+  color: #b22830;
+  cursor: pointer;
+  text-decoration: none;
+}
+#moreText {
+  color: slategrey;
+}

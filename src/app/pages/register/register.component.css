@@ -1,0 +1,18 @@
+.container-fluid {
+    margin-top: 100px;
+}
+
+.btn {
+    background-color: #B22830;
+    color: white;
+    border-radius: 20px;
+
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.h3 {
+    font-weight: bold;
+}

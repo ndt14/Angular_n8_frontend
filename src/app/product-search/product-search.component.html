@@ -1,0 +1,22 @@
+<div class="p-mt-3">
+  <div class="p-grid">
+    <div class="p-col">
+      <h4>Search Results</h4>
+      <div class="p-card-group">
+        <div class="p-grid p-align-start" *ngFor="let product of searchResults">
+          <div class="p-col-12 p-md-4 p-lg-3">
+            <a [routerLink]="['/products', product._id]">
+                <div class="p-card">
+                    <img [src]="product.image" alt="" class="p-card-img-top">
+                    <div class="p-card-body">
+                      <h5 class="p-card-title">{{ product.name }}</h5>
+                      <p class="p-card-text">Price: {{ product.price }} $</p>
+                    </div>
+                </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

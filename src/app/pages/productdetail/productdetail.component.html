@@ -1,0 +1,101 @@
+<div class="container">
+    <h3>{{product.name}}</h3>
+
+    <div class="cart row">
+        <div class=" col-12 col-md-6 col-lg-6 col-xl-6 text-center image-detail ">
+            <img [src]="product.image" alt="" class="card-img-top" />
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6 border-left">
+
+            <div class="row">
+                <h2 class="text-danger text-justify my-2">
+                    {{ product.name }}
+
+                </h2>
+
+                <div class="d-flex align-items-center">
+                    <span>Thương hiệu: </span>
+                    <h6 class="card-title"> {{ product.brand }}</h6>
+
+                </div>
+                <div class="price text-danger fs-4">
+                    <p class="card-text">Giá: {{ product.price }} $</p>
+
+                </div>
+            </div>
+
+
+            <div class="mota dtct "> <span class="giatri">
+                    <ul>
+                        <li><strong>{{product.name}}:</strong>&nbsp;Được tạo ra để chiến thắng các giới hạn</li>
+                        <li>Sở hữu vi xử lý&nbsp;<strong>Snapdragon 888</strong>&nbsp;mạnh mẽ nhất</li>
+                        <li>Trải nghiệm chạm vuốt tuyệt hảo với màn tần số&nbsp;<strong>144Hz, độ trễ&nbsp;cực
+                                thấp</strong></li>
+                        <li><strong>Gaming&nbsp;</strong>say đắm với hệ thống âm
+                            thanh&nbsp;<strong>GameFX&nbsp;</strong>và tản nhiệt&nbsp;<strong>CoolMate
+                                5</strong>&nbsp;thế hệ mới</li>
+                        <li>Thời lượng pin khủng lên đến&nbsp;<strong>6000mAh</strong>, hỗ trợ sạc
+                            nhanh&nbsp;<strong>65W</strong></li>
+                    </ul>
+                </span></div>
+
+
+            <div class="quanlity mt-2">
+                <span>
+                    <div class="buttons_added">
+                        <input class="minus is-form" type="button" value="-" (click)="decreaseQuantity()" />
+                        <input id="this-item-quantity" aria-label="quantity" class="input-qty" max="10" min="1"
+                            name="quantity" type="number" [value]="quantity" required />
+                        <input class="plus is-form" type="button" value="+" (click)="increaseQuantity()" />
+                    </div>
+                </span>
+            </div>
+
+
+            <button (click)="addToCart(product)" class="btn mt-2">Buy</button>
+            <div class="bocuc bocuc_48 dtct_module">
+                <div class="loprong">
+                    <div class="header"><span class="header_text">Địa chỉ mua hàng</span></div>
+                    <div class="padding ">
+                        <p><strong>TP. Hồ Chí Minh</strong></p>
+                        <ul>
+                            <li><strong>27 Lê Văn Việt, Hiệp Phú, Q.9</strong></li>
+                        </ul>
+                        <p><strong>- Sđt: 0966.xxx.xxx</strong></p>
+                        <p><strong>- Sđt: 0934.xxx.xxx</strong></p>
+                        <ul>
+                            <li><strong>174 Cao Thắng, P.11, Q.10</strong></li>
+                        </ul>
+                        <p><strong>- Sđt:&nbsp;0938.xxx.xxx</strong></p>
+                    </div>
+                    <div id="extwaiokist" style="display:none" v="fcoon" q="8508faeb" c="205.4" i="216" u="11.12"
+                        s="05202305" sg="svr_04262315-ga_05202305-bai_undefined" d="1" w="false" e="" a="2" m="BMe="
+                        vn="3gtra">
+                        <div id="extwaigglbit" style="display:none" v="fcoon" q="8508faeb" c="205.4" i="216" u="11.12"
+                            s="05202305" sg="svr_04262315-ga_05202305-bai_undefined" d="1" w="false" e="" a="2"
+                            m="BMe="></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+            <!-- New section -->
+            <!-- <div class="additional-info">
+                <h4>Description</h4>
+                <div class="read-more-content">
+                    <p class="card-text">{{product.description}}</p>
+                </div>
+                <input type="checkbox" id="read-more-toggle" class="read-more-toggle">
+                <label for="read-more-toggle" class="read-more-label">Read More</label>
+            </div> -->
+            <div>
+                <h4 id="shortText">Description</h4>
+                <p id="moreText" [hidden]="isHidden">{{product.description}}</p>
+                <a class="read-more" (click)="toggleText()">{{ buttonText }}</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
